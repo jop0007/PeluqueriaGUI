@@ -18,6 +18,8 @@ public class Datos extends javax.swing.JFrame {
     public Datos() {
         initComponents();
         setExtendedState(getExtendedState() | javax.swing.JFrame.MAXIMIZED_BOTH);
+        String inicial = (String) boxTablas.getSelectedItem(); 
+        ((java.awt.CardLayout) panelTablas.getLayout()).show(panelTablas, inicial);
     }
 
     /**
@@ -33,10 +35,10 @@ public class Datos extends javax.swing.JFrame {
         panelDatos = new javax.swing.JPanel();
         boxTablas = new javax.swing.JComboBox<>();
         panelTablas = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        panelClientes = new javax.swing.JPanel();
+        panelPeluqueras = new javax.swing.JPanel();
+        panelServicios = new javax.swing.JPanel();
+        panelProductos = new javax.swing.JPanel();
         panelConsultas = new javax.swing.JPanel();
         panelVis = new javax.swing.JPanel();
         panelSincro = new javax.swing.JPanel();
@@ -53,65 +55,65 @@ public class Datos extends javax.swing.JFrame {
 
         panelTablas.setLayout(new java.awt.CardLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
+        panelClientes.setBackground(new java.awt.Color(255, 102, 102));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelClientesLayout = new javax.swing.GroupLayout(panelClientes);
+        panelClientes.setLayout(panelClientesLayout);
+        panelClientesLayout.setHorizontalGroup(
+            panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 683, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelClientesLayout.setVerticalGroup(
+            panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 343, Short.MAX_VALUE)
         );
 
-        panelTablas.add(jPanel1, "Clientes");
+        panelTablas.add(panelClientes, "Clientes");
 
-        jPanel2.setBackground(new java.awt.Color(51, 255, 0));
+        panelPeluqueras.setBackground(new java.awt.Color(51, 255, 0));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelPeluquerasLayout = new javax.swing.GroupLayout(panelPeluqueras);
+        panelPeluqueras.setLayout(panelPeluquerasLayout);
+        panelPeluquerasLayout.setHorizontalGroup(
+            panelPeluquerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 683, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelPeluquerasLayout.setVerticalGroup(
+            panelPeluquerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 343, Short.MAX_VALUE)
         );
 
-        panelTablas.add(jPanel2, "Peluqueras");
+        panelTablas.add(panelPeluqueras, "Peluqueras");
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 255));
+        panelServicios.setBackground(new java.awt.Color(153, 153, 255));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelServiciosLayout = new javax.swing.GroupLayout(panelServicios);
+        panelServicios.setLayout(panelServiciosLayout);
+        panelServiciosLayout.setHorizontalGroup(
+            panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 683, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelServiciosLayout.setVerticalGroup(
+            panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 343, Short.MAX_VALUE)
         );
 
-        panelTablas.add(jPanel3, "Servicios");
+        panelTablas.add(panelServicios, "Servicios");
 
-        jPanel4.setBackground(new java.awt.Color(102, 102, 255));
+        panelProductos.setBackground(new java.awt.Color(102, 102, 255));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelProductosLayout = new javax.swing.GroupLayout(panelProductos);
+        panelProductos.setLayout(panelProductosLayout);
+        panelProductosLayout.setHorizontalGroup(
+            panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 683, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelProductosLayout.setVerticalGroup(
+            panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 343, Short.MAX_VALUE)
         );
 
-        panelTablas.add(jPanel4, "Productos");
+        panelTablas.add(panelProductos, "Productos");
 
         javax.swing.GroupLayout panelDatosLayout = new javax.swing.GroupLayout(panelDatos);
         panelDatos.setLayout(panelDatosLayout);
@@ -193,7 +195,9 @@ public class Datos extends javax.swing.JFrame {
 
     private void boxTablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxTablasActionPerformed
         // TODO add your handling code here:
-        
+        String key = (String) boxTablas.getSelectedItem();               
+        java.awt.CardLayout cl = (java.awt.CardLayout) panelTablas.getLayout();
+        cl.show(panelTablas, key);  
     }//GEN-LAST:event_boxTablasActionPerformed
 
     /**
@@ -223,13 +227,13 @@ public class Datos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> boxTablas;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel panelClientes;
     private javax.swing.JPanel panelConsultas;
     private javax.swing.JPanel panelDatos;
+    private javax.swing.JPanel panelPeluqueras;
     private javax.swing.JTabbedPane panelPestanas;
+    private javax.swing.JPanel panelProductos;
+    private javax.swing.JPanel panelServicios;
     private javax.swing.JPanel panelSincro;
     private javax.swing.JPanel panelTablas;
     private javax.swing.JPanel panelVis;
